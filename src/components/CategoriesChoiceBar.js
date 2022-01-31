@@ -15,7 +15,7 @@ const CategoriesChoiceBar = ({ additionalClass }) => {
     }
 
     return (
-        <div className="md:max-w-3xl flex justify-between mx-auto px-2 sm:px-6 lg:px-8">
+        <div className={['md:max-w-3xl flex justify-between mx-auto px-2 sm:px-6 lg:px-8', ...additionalClass].join(' ')}>
             <div className="sm:hidden w-full">
                 <label htmlFor="tabs" className="sr-only">
                     Select a tab
