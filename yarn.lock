@@ -1138,6 +1138,11 @@
   "resolved" "https://registry.npmjs.org/@fontsource/poppins/-/poppins-4.5.1.tgz"
   "version" "4.5.1"
 
+"@fontsource/sora@^4.5.1":
+  "integrity" "sha512-NCtO8MWU/t+Q3Gnm8Yjb3i8gLlayIUH/cWr8dz3GiNO82fCUs8RWov6hCFpUg5LMdTnVHNUjgtN1Xn1JsXqt4w=="
+  "resolved" "https://registry.npmjs.org/@fontsource/sora/-/sora-4.5.1.tgz"
+  "version" "4.5.1"
+
 "@gatsbyjs/reach-router@^1.3.5", "@gatsbyjs/reach-router@^1.3.6":
   "integrity" "sha512-RW9ZBir9kqtw4IWm+Z+DLWGOeoJxoaTvNVrnR5fV9zD8EmfAhbBN/hS6i6VnTMFZ7rdd6mnpx2/XtnMvYfsaVQ=="
   "resolved" "https://registry.npmjs.org/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz"
