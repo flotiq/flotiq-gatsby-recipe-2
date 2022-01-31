@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
+import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
 const IndexPage = ({ data }) => {
     const recipes = data.allRecipe.nodes;
@@ -10,6 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
+            <CategoriesChoiceBar additionalClass={['my-5']} />
             {recipes.map((recipe) => (
                 <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
             ))}
