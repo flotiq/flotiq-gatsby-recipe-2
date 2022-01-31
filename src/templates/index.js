@@ -10,6 +10,9 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
+            {recipes.map((recipe) => (
+                <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
+            ))}
         </Layout>
     );
 };
