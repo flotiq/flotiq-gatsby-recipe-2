@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Layout = ({ children, additionalClass = [] }) => (
-    <main className={['m-1', ...additionalClass].join(' ')}>
+    <main className={['font-poppins', ...additionalClass].join(' ')}>
         {children}
     </main>
 );
