@@ -17,5 +17,7 @@ module.exports = {
             sora: ['Sora', 'sans-serif'],
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 };
