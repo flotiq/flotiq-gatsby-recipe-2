@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
+import RecipeCards from '../sections/RecipeCards';
 
 const IndexPage = ({ data }) => {
     const recipes = data.allRecipe.nodes;
@@ -16,14 +17,12 @@ const IndexPage = ({ data }) => {
         { name: 'Vegan', href: '#', current: false },
     ];
     return (
-        <Layout>
+        <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
-            {recipes.map((recipe) => (
-                <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
-            ))}
+            <RecipeCards recipes={recipes} />
             <Pagination
                 page={1}
                 numOfPages={10}
