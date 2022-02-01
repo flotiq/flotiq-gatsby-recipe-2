@@ -21,6 +21,8 @@ module.exports = {
     presets: [
         require('./node_modules/flotiq-components-react/dist/tailwind.preset'), // Flotiq Component theme presets
     ],
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
     safelist: require('./node_modules/flotiq-components-react/dist/tailwind.safelist'),
 };
