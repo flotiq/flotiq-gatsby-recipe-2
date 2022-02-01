@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import RecipeSteps from '../components/recipe/RecipeSteps';
 
 const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
     return (
-        <Layout additionalClass={['bg-white']}>
-            <div>Recipe</div>
+        <Layout additionalClass={['bg-light-gray']}>
+            <RecipeSteps additionalClass={['my-5']} />
         </Layout>
     );
 };
@@ -43,6 +44,10 @@ export const pageQuery = graphql`
                 product
             }
             steps {
+                step
+                internal {
+                    description
+                }
                 image {
                     extension
                     id
