@@ -1,5 +1,6 @@
 module.exports = {
     content: [
+        './node_modules/flotiq-components-react/dist/**/*.{js,jsx,ts,tsx}',
         './src/**/*.{js,jsx,ts,tsx}',
     ],
     theme: {
@@ -17,5 +18,9 @@ module.exports = {
             sora: ['Sora', 'sans-serif'],
         },
     },
+    presets: [
+        require('./node_modules/flotiq-components-react/dist/tailwind.preset'), // Flotiq Component theme presets
+    ],
     plugins: [],
+    safelist: require('./node_modules/flotiq-components-react/dist/tailwind.safelist'),
 };
