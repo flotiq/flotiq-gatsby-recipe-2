@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
+import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 
 const IndexPage = ({ data }) => {
     const recipes = data.allRecipe.nodes;
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
             {recipes.map((recipe) => (
                 <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
             ))}
+            <RecipeFeaturedCard />
         </Layout>
     );
 };
