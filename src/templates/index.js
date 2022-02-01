@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
-            <RecipeCards recipes={recipes} />
+            <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
                 page={1}
                 numOfPages={10}
