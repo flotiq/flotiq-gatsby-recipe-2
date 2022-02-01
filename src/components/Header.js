@@ -7,7 +7,7 @@ const Header = () => (
     <Disclosure as="nav">
         {({ open }) => (
             <>
-                <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto py-4">
                     <div className="flex justify-between h-auto flex-wrap md:flex-nowrap">
                         <div className="order-2 md:order-1 flex grow md:grow-0">
                             <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">

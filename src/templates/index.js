@@ -17,14 +17,13 @@ const IndexPage = ({ data }) => {
             ))}
             <RecipeFeaturedCard
                 title={(
-                    <span className="block text-2xl md:text-4xl mb-4 mx-1 font-normal leading-normal">
+                    <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">
                         Cozy, Little
-                        <span className="block text-secondary"> Chilli Weekend </span>
+                        <span className="block text-secondary leading-relaxed"> Chilli Weekend </span>
                     </span>
                 )}
-                excerpt="If you’re a beginning website owner you might be wondering what a
-            CMS is and if you need one. This article will look at some valid reasons to invest in a CMS,
-            but also will try to shed some light on the caveats, so read on."
+                excerpt="Get some protein into a vegan diet with this tasty chickpea curry jacket.
+                It's an easy midweek meal, or filling lunch that packs a lot of flavour."
                 tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
                 preparationTime="10 min"
                 portions="2"
