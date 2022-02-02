@@ -49,6 +49,28 @@ export const pageQuery = graphql`
                 }
             }
         }
+        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4,) {
+            nodes {
+                id
+                cookingTime
+                description
+                name
+                slug
+                servings
+                image {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
+                }
+            }
+        }
     }
 `;
 
