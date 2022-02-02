@@ -68,17 +68,6 @@ export const pageQuery = graphql`
                         }
                     }
                 }
-                ingredients {
-                    amount
-                    unit
-                    product
-                }
-                steps {
-                    image {
-                        extension
-                        id
-                    }
-                }
             }
         }
     }

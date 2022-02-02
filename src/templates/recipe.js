@@ -7,7 +7,7 @@ const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
     return (
         <Layout additionalClass={['bg-light-gray']}>
-            <RecipeSteps additionalClass={['my-5']} />
+            <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} />
         </Layout>
     );
 };
@@ -44,13 +44,33 @@ export const pageQuery = graphql`
                 product
             }
             steps {
-                step
-                internal {
-                    description
+                image {
+                    localFile {
+                        publicURL
+                    }
                 }
+                step
+            }
+        }
+        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4,) {
+            nodes {
+                id
+                cookingTime
+                description
+                name
+                slug
+                servings
                 image {
                     extension
-                    id
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
                 }
             }
         }
