@@ -11,7 +11,7 @@ const RecipeTemplate = ({ data }) => {
                 <div className="flex basis-full md:basis-1/2">
                     Header image
                 </div>
-                <div className="flex flex-col basis-full md:basis-1/2 pl-0 md:pl-12 py-5 bg-white">
+                <div className="flex flex-col basis-full md:basis-1/2 pl-0 md:pl-12 pt-5 pb-10 bg-white">
                     <div className="flex flex-wrap justify-start text-sm font-light space-x-5 py-5">
                         <p className="px-4 py-3 bg-light-gray">
                             Time:
