@@ -1,12 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import HeaderImageWithText from '../components/recipe/HeaderImageWithText';
 
 const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
     return (
         <Layout additionalClass={['bg-white']}>
-            <div>Recipe</div>
+            <HeaderImageWithText
+                recipe={recipe}
+                headerText1="Enjoy"
+                headerText2="your"
+                headerText3="meal!"
+            />
         </Layout>
     );
 };
