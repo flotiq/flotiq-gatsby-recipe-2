@@ -16,7 +16,11 @@ const RecipeTemplate = ({ data }) => {
                         <p className="px-4 py-3 bg-light-gray">
                             Time:
                             {' '}
-                            <span className="font-semibold">{recipe.cookingTime}</span>
+                            <span className="font-semibold">
+                                {recipe.cookingTime}
+                                {' '}
+                            </span>
+                            min
                         </p>
                         <p className="px-4 py-3 bg-light-gray">
                             Portions:
