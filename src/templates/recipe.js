@@ -39,14 +39,9 @@ const RecipeTemplate = ({ data }) => {
                         text="Ingredients:"
                     />
                     <List
-                        items={[
-                            {
-                                content: 'Dolor sit amet',
-                            },
-                            {
-                                content: 'Donec condimentum augue vitae rhoncus vehicula',
-                            },
-                        ]}
+                        items={recipe.ingredients.map((ingredient) => (
+                            { content: `${ingredient.amount} ${ingredient.unit} ${ingredient.product}` }
+                        ))}
                     />
                 </div>
             </div>
