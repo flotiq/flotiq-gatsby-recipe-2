@@ -7,7 +7,7 @@ const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
     return (
         <Layout additionalClass={['bg-light-gray']}>
-            <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} />
+            <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} headerText="Steps:" />
         </Layout>
     );
 };
