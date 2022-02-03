@@ -5,9 +5,12 @@ import Layout from '../layouts/layout';
 import RecipeBackButton from '../components/recipe/RecipeBackButton';
 import RecipeSteps from '../components/recipe/RecipeSteps';
 import HeaderImageWithText from '../components/recipe/HeaderImageWithText';
+import RecipeCards from '../sections/RecipeCards';
 
 const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
+    const recipes = data.allRecipe.nodes;
+
     return (
         <Layout additionalClass={['bg-light-gray']}>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -60,6 +63,7 @@ const RecipeTemplate = ({ data }) => {
                 headerText2="your"
                 headerText3="meal!"
             />
+            <RecipeCards recipes={recipes} headerText="Next recipe to cook:" />
         </Layout>
     );
 };
@@ -104,29 +108,7 @@ export const pageQuery = graphql`
                 step
             }
         }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4,) {
-            nodes {
-                id
-                cookingTime
-                description
-                name
-                slug
-                servings
-                image {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH)
-                        }
-                    }
-                }
-            }
-        }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4,) {
+        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3,) {
             nodes {
                 id
                 cookingTime
