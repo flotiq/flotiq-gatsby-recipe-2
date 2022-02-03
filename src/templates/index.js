@@ -40,7 +40,6 @@ const IndexPage = ({ data }) => {
                 additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
             />
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
-            <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <RecipeFeaturedCard
                 title={(
                     <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">
@@ -55,6 +54,7 @@ const IndexPage = ({ data }) => {
                 portions="2"
                 image={RecipeImage}
             />
+            <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
                 page={1}
                 numOfPages={10}
