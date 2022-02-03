@@ -9,27 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allRecipe(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
                 edges {
                     node {
-                        id
-                        cookingTime
-                        description
-                        name
                         slug
-                        servings
-                        image {
-                            extension
-                            id
-                        }
-                        ingredients {
-                            amount
-                            unit
-                            product
-                        }
-                        steps {
-                            image {
-                                extension
-                                id
-                            }
-                        }
                     }
                 }
             }
