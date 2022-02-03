@@ -12,7 +12,10 @@ const RecipeTemplate = ({ data }) => {
                 <RecipeBackButton additionalClass={['mt-12 mb-5 uppercase']} backButtonText="Go back" />
             </div>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                <div className="flex basis-full md:basis-1/2">
+                <div
+                    className="flex basis-full md:basis-1/2"
+                    style={{ backgroundImage: `url('${recipe.image[0] && recipe.image[0].localFile.publicURL}')` }}
+                >
                     <Image url={recipe.image[0] && recipe.image[0].localFile.publicURL} />
                 </div>
                 <div className="flex flex-col basis-full md:basis-1/2 pl-0 md:pl-12 py-5 bg-white">
