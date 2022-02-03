@@ -21,7 +21,16 @@ const IndexPage = ({ data }) => {
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
             <Announcement
-                content="A blog full of easy to make recipes that take the stress out of cooking."
+                content={(
+                    <span className="leading-normal">
+                        A blog full of
+                        {' '}
+                        <span className="text-secondary font-medium">easy to make recipes</span>
+                        <br />
+                        {' '}
+                        that take the stress out of cooking.
+                    </span>
+                )}
                 rounded="none"
                 textAlignment="center"
                 variant="transparent"
