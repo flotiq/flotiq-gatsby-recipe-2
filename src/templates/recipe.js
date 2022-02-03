@@ -50,7 +50,9 @@ const RecipeTemplate = ({ data }) => {
                     />
                 </div>
             </div>
-            <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} headerText="Steps:" />
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} headerText="Steps:" />
+            </div>
         </Layout>
     );
 };
