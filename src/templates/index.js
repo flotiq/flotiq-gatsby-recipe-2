@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Pagination } from 'flotiq-components-react';
+import { Announcement, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
@@ -20,6 +20,22 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
+            <Announcement
+                content={(
+                    <span className="leading-normal">
+                        A blog full of
+                        {' '}
+                        <span className="text-secondary font-medium">easy to make recipes</span>
+                        <br />
+                        {' '}
+                        that take the stress out of cooking.
+                    </span>
+                )}
+                rounded="none"
+                textAlignment="center"
+                variant="transparent"
+                additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
+            />
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
             {recipes.map((recipe) => (
                 <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
