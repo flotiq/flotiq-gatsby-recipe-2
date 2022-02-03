@@ -4,6 +4,7 @@ import { Image, Header, List, Paragraph } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import RecipeBackButton from '../components/recipe/RecipeBackButton';
 import RecipeSteps from '../components/recipe/RecipeSteps';
+import HeaderImageWithText from '../components/recipe/HeaderImageWithText';
 
 const RecipeTemplate = ({ data }) => {
     const { recipe } = data;
@@ -53,6 +54,12 @@ const RecipeTemplate = ({ data }) => {
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <RecipeSteps steps={recipe.steps} additionalClass={['my-5']} headerText="Steps:" />
             </div>
+            <HeaderImageWithText
+                recipe={recipe}
+                headerText1="Enjoy"
+                headerText2="your"
+                headerText3="meal!"
+            />
         </Layout>
     );
 };
