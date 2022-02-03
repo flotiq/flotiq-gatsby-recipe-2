@@ -15,12 +15,15 @@ const RecipeTemplate = ({ data }) => {
             </div>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div
-                    className="flex basis-full md:basis-1/2"
+                    className="flex basis-full lg:basis-1/2 bg-cover bg-center"
                     style={{ backgroundImage: `url('${recipe.image[0] && recipe.image[0].localFile.publicURL}')` }}
                 >
-                    <Image url={recipe.image[0] && recipe.image[0].localFile.publicURL} />
+                    <Image
+                        url={recipe.image[0] && recipe.image[0].localFile.publicURL}
+                        additionalClasses={['lg:hidden']}
+                    />
                 </div>
-                <div className="flex flex-col basis-full md:basis-1/2 pl-0 md:pl-12 pt-5 pb-10 bg-white">
+                <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
                     <div className="flex flex-wrap justify-start text-sm font-light space-x-5 py-5">
                         <p className="px-4 py-3 bg-light-gray">
                             Time:
