@@ -1,10 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Pagination } from 'flotiq-components-react';
+import { Announcement, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 import RecipeCards from '../sections/RecipeCards';
+import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
+import RecipeImage from '../assets/recipe-image.jpg';
 
 const IndexPage = ({ data }) => {
     const recipes = data.allRecipe.nodes;
@@ -21,8 +23,38 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby recipe starter</title>
             </Helmet>
+            <Announcement
+                content={(
+                    <span className="leading-normal">
+                        A blog full of
+                        {' '}
+                        <span className="text-secondary font-medium">easy to make recipes</span>
+                        <br />
+                        {' '}
+                        that take the stress out of cooking.
+                    </span>
+                )}
+                rounded="none"
+                textAlignment="center"
+                variant="transparent"
+                additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
+            />
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
             <RecipeCards recipes={recipes} headerText="Newest recipes" />
+            <RecipeFeaturedCard
+                title={(
+                    <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">
+                        Cozy, Little
+                        <span className="block text-secondary leading-relaxed"> Chilli Weekend </span>
+                    </span>
+                )}
+                excerpt="Get some protein into a vegan diet with this tasty chickpea curry jacket.
+                It's an easy midweek meal, or filling lunch that packs a lot of flavour."
+                tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
+                preparationTime="10 min"
+                portions="2"
+                image={RecipeImage}
+            />
             <Pagination
                 page={1}
                 numOfPages={10}
