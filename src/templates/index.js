@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Announcement, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
+import RecipeCards from '../sections/RecipeCards';
 import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 import RecipeImage from '../assets/recipe-image.jpg';
 
@@ -39,9 +40,6 @@ const IndexPage = ({ data }) => {
                 additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
             />
             <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
-            {recipes.map((recipe) => (
-                <a href={`/${recipe.slug}`}><p key={recipe.id}>{recipe.name}</p></a>
-            ))}
             <RecipeFeaturedCard
                 title={(
                     <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">
@@ -56,6 +54,7 @@ const IndexPage = ({ data }) => {
                 portions="2"
                 image={RecipeImage}
             />
+            <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
                 page={1}
                 numOfPages={10}
