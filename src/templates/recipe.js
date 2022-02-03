@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Image } from 'flotiq-components-react';
-import { Header, List, Paragraph } from 'flotiq-components-react';
+import { Image, Header, List, Paragraph } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import RecipeBackButton from '../components/recipe/RecipeBackButton';
 
