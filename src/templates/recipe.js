@@ -108,7 +108,7 @@ export const pageQuery = graphql`
                 step
             }
         }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3,) {
+        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3, filter: {slug: {ne: $slug}}) {
             nodes {
                 id
                 cookingTime
