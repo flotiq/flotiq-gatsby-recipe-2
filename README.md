@@ -2,10 +2,10 @@
     <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
 </a>
 
-Gatsby starter boilerplate with Flotiq source
+Gatsby starter for recipes with Flotiq source
 ===========================
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Kick off your project with this recipe boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 ## Quick start
 
@@ -13,7 +13,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
     ```bash
    npm install -g flotiq-cli
-   flotiq start [flotiqApiKey] [projectName] https://github.com/flotiq/gatsby-starter-boilerplate.git
+   flotiq start [flotiqApiKey] [projectName] https://github.com/flotiq/flotiq-gatsby-recipe-2.git
     ```
     * `flotiqApKey` - Read and write API key to your Flotiq account
     * `projectName` - project name or project path (if you wish to start project in or import data from the current directory - use `.`)
@@ -21,7 +21,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 2. **You can also start the project from template using Gatsby CLI**
 
     ```bash
-    gatsby new my-hello-world-starter https://github.com/flotiq/gatsby-starter-boilerplate.git
+    gatsby new flotiq-gatsby-recipe-2 https://github.com/flotiq/flotiq-gatsby-recipe-2.git
     ```
 
 3. **Configure application**
@@ -40,7 +40,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-hello-world-starter/
+    cd flotiq-gatsby-recipe-2/
     gatsby develop
     ```
 
@@ -52,7 +52,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
     flotiq import [flotiqApiKey] .
     ```
 
-    It will add one example object to your Flotiq account.
+    It will add two example objects to your Flotiq account.
 
     _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work, You don't need any content types in your account._
 
@@ -62,7 +62,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `flotiq-gatsby-recipe-2` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 6. **Manage your content using Flotiq editor**
 
@@ -72,15 +72,15 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsby-starter-boilerplate)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq-gatsby-recipe-2)
 
 You can also deploy this project to Heroku in 3 minutes:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-boilerplate)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-gatsby-recipe-2)
 
 Or to Netlify:
 
-[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/gatsby-starter-boilerplate)
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-recipe-2)
 
 
 ## What's inside?
@@ -92,7 +92,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── .github
     ├── node_modules
     ├─┬ src
-    │ ├─── assets
+    │ ├── assets
     │ ├── pages
     │ └── style
     ├── .eslintignore
@@ -167,5 +167,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 If you wish to talk with us about this project, feel free to hop on our [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX).
 
-If you found a bug, please report it in [issues](https://github.com/flotiq/gatsby-starter-boilerplate/issues).
+If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-gatsby-recipe-2/issues).
 
