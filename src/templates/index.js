@@ -8,7 +8,7 @@ import RecipeCards from '../sections/RecipeCards';
 import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 import RecipeImage from '../assets/recipe-image.jpg';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
     const categoryTabs = [
         { name: 'Breakfast', href: '#', current: true },
@@ -56,8 +56,8 @@ const IndexPage = ({ data }) => {
             />
             <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
-                page={1}
-                numOfPages={10}
+                page={pageContext.currentPage}
+                numOfPages={pageContext.numPages}
                 borderVariant="transparent"
                 next="ᐳ"
                 prev="ᐸ"
