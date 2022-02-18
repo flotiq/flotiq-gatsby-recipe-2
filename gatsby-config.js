@@ -41,7 +41,7 @@ module.exports = {
             options: {
                 authToken: process.env.GATSBY_FLOTIQ_API_KEY,
                 downloadMediaFile: true,
-                forceReload: false,
+                forceReload: true,
                 includeTypes: [
                     '_media',
                     'recipe',

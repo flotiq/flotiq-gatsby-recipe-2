@@ -3,21 +3,21 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Announcement, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
-import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
+// import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 import RecipeCards from '../sections/RecipeCards';
 import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 import RecipeImage from '../assets/recipe-image.jpg';
 
 const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
-    const categoryTabs = [
-        { name: 'Breakfast', href: '#', current: true },
-        { name: 'Dinner', href: '#', current: false },
-        { name: 'Dessert', href: '#', current: false },
-        { name: 'Lunch', href: '#', current: false },
-        { name: 'Snack', href: '#', current: false },
-        { name: 'Vegan', href: '#', current: false },
-    ];
+    // const categoryTabs = [
+    //     { name: 'Breakfast', href: '#', current: true },
+    //     { name: 'Dinner', href: '#', current: false },
+    //     { name: 'Dessert', href: '#', current: false },
+    //     { name: 'Lunch', href: '#', current: false },
+    //     { name: 'Snack', href: '#', current: false },
+    //     { name: 'Vegan', href: '#', current: false },
+    // ];
     return (
         <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
@@ -39,7 +39,8 @@ const IndexPage = ({ data, pageContext }) => {
                 variant="transparent"
                 additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
             />
-            <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
+            {/* Uncomment this to add categories to your recipes */}
+            {/* <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} /> */}
             <RecipeFeaturedCard
                 title={(
                     <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import { Header } from 'flotiq-components-react';
 import RecipeCard from '../components/RecipeCard';
 
@@ -12,9 +11,9 @@ const RecipeCards = ({ recipes, headerText }) => (
                     cookingTime={recipe.cookingTime}
                     servings={recipe.servings}
                     key={recipe.id}
-                    onClick={() => { navigate(`/${recipe.slug}`); }}
                     image={recipe.image[0] && recipe.image[0].localFile.publicURL}
                     name={recipe.name}
+                    slug={recipe.slug}
                     tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
                 />
             ))}
