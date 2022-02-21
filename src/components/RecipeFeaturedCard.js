@@ -3,12 +3,12 @@ import { Card } from 'flotiq-components-react';
 
 const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, tags, image, onClick }) => (
     <Card
-        vertical
+        horizontal
         onClick={onClick}
         bordered={false}
         rounded="none"
         additionalClasses={['mb-4 cursor-pointer max-w-7xl mx-auto ']}
-        proportionsForVertical={{
+        proportionsForHorizontal={{
             body: '2/5',
             img: '3/5',
             breakpoint: 'lg',
