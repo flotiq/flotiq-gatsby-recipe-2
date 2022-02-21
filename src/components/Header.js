@@ -1,5 +1,6 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
+import { Link } from 'gatsby';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../assets/recipe-logo.svg';
 
@@ -11,13 +12,13 @@ const Header = () => (
                     <div className="flex justify-between h-auto flex-wrap md:flex-nowrap">
                         <div className="order-2 md:order-1 flex grow md:grow-0">
                             <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
-                                <a href="/">
+                                <Link to="/">
                                     <img
                                         className="block h-8 md:h-12 w-auto"
                                         src={Logo}
                                         alt="Flotiq"
                                     />
-                                </a>
+                                </Link>
                             </div>
                             <div className="-ml-2 mr-2 flex items-center md:hidden">
                                 <Disclosure.Button

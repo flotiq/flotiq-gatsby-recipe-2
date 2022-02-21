@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Image, Header, List, Paragraph } from 'flotiq-components-react';
+import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
 import RecipeBackButton from '../components/recipe/RecipeBackButton';
 import RecipeSteps from '../components/recipe/RecipeSteps';
@@ -13,6 +14,9 @@ const RecipeTemplate = ({ data }) => {
 
     return (
         <Layout additionalClass={['bg-light-gray']}>
+            <Helmet>
+                <title>{recipe.name}</title>
+            </Helmet>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <RecipeBackButton additionalClass={['mt-12 mb-5 uppercase']} backButtonText="Go back" />
             </div>
