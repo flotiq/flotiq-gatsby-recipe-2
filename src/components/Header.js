@@ -2,10 +2,12 @@ import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Link } from 'gatsby';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Image } from 'flotiq-components-react';
+import { Image, Header } from 'flotiq-components-react';
 import Logo from '../assets/recipe-logo.svg';
 
-const Header = () => (
+const headerText = 'All you can eat';
+
+const PageHeader = () => (
     <Disclosure as="nav">
         {({ open }) => (
             <>
@@ -33,7 +35,7 @@ const Header = () => (
                             </div>
                         </div>
                         <div className="order-3 md:order-2 hidden md:flex items-center justify-center w-full">
-                            <h1 className="text-3xl font-semibold">All you can eat</h1>
+                            <Header text={headerText} additionalClasses={['!text-3xl font-semibold']} />
                         </div>
                         <div className="order-1 md:order-3 flex items-center">
                             <div className="flex-shrink-0">
@@ -66,4 +68,4 @@ const Header = () => (
     </Disclosure>
 );
 
-export default Header;
+export default PageHeader;
