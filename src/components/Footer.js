@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { PoweredByFlotiq } from 'flotiq-components-react';
+import { Image, PoweredByFlotiq } from 'flotiq-components-react';
 import Logo from '../assets/recipe-logo.svg';
 
 /* eslint-disable-next-line max-len */
@@ -83,11 +83,7 @@ const Footer = () => (
                 flex flex-col items-center space-y-5 md:space-y-8"
         >
             <Link to="/">
-                <img
-                    className="block h-8 w-auto md:h-10 w-auto"
-                    src={Logo}
-                    alt="Flotiq"
-                />
+                <Image url={Logo} additionalClasses={['block h-8 w-auto md:h-10 w-auto']} />
             </Link>
             <div className="flex items-center justify-center space-x-4 md:space-x-3">
                 {navigation.social.map((item) => (
