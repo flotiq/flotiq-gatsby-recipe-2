@@ -59,7 +59,7 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
             style={{ backgroundImage: `url('${image}')` }}
             className="w-full lg:w-auto order-1 lg:order-2 lg:basis-3/5 bg-cover bg-center"
         >
-            <Card.Img src={image} alt={title} additionalClasses={['block lg:hidden w-full']} />
+            <Card.Img src={image} alt={image} additionalClasses={['block lg:hidden w-full']} />
         </div>
 
     </Card>
