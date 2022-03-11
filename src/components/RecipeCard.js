@@ -4,7 +4,6 @@ import { Card } from 'flotiq-components-react';
 
 const CustomRecipeCard = ({ cookingTime, servings, name, image, tags, slug }) => (
     <Card
-        standard
         bordered={false}
         additionalClasses={['mb-4 cursor-pointer basis-full md:basis-1/2 lg:basis-1/3 px-2 !bg-transparent']}
     >
