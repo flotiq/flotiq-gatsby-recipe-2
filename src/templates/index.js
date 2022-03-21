@@ -21,7 +21,11 @@ const IndexPage = ({ data, pageContext }) => {
     return (
         <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
-                <title>Flotiq Gatsby recipe starter</title>
+                <title>{data.site.siteMetadata.title}</title>
+                <meta
+                    name="description"
+                    content={data.site.siteMetadata.description}
+                />
             </Helmet>
             <Announcement
                 content={(
@@ -78,6 +82,7 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                description
             }
         }
         allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Header, Image } from 'flotiq-components-react';
+import { Header } from 'flotiq-components-react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const HeaderImageWithText = ({ recipe, headerText1, headerText2, headerText3 }) => (
     <div className="relative">
         <div className="px-10 py-5 md:p-20 flex flex-col items-start justify-end
-        w-7/12 h-full absolute bg-gradient-to-r from-primary to-transparent"
+        w-7/12 h-full absolute bg-gradient-to-r from-primary to-transparent z-10"
         >
             <Header
                 text={headerText1}
@@ -22,7 +23,11 @@ const HeaderImageWithText = ({ recipe, headerText1, headerText2, headerText3 }) 
             + '!text-2xl md:!text-6xl !p-0']}
             />
         </div>
-        <Image url={recipe.image[0] && recipe.image[0].localFile.publicURL} />
+        <GatsbyImage
+            image={getImage(recipe.image[0].localFile)}
+            alt={headerText1}
+            className="w-full"
+        />
     </div>
 );
 

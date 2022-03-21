@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const CustomRecipeCard = ({ cookingTime, servings, name, image, tags, slug }) => (
     <Card
@@ -8,7 +9,11 @@ const CustomRecipeCard = ({ cookingTime, servings, name, image, tags, slug }) =>
         additionalClasses={['mb-4 cursor-pointer basis-full md:basis-1/2 lg:basis-1/3 px-2 !bg-transparent']}
     >
         <Link to={`/${slug}`}>
-            <Card.Img src={image} alt={name} additionalContainerClasses={['w-full']} />
+            <GatsbyImage
+                image={getImage(image)}
+                alt={name}
+                className="w-full"
+            />
         </Link>
         <Card.Body
             additionalClasses={[

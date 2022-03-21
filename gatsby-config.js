@@ -11,8 +11,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby starter boilerplate',
-        description: 'Flotiq gatsby starter boilerplate',
+        title: 'Flotiq recipe starter for Gatsby',
+        description: 'Flotiq recipe starter for Gatsby',
         siteUrl: 'https://example.com',
     },
     plugins: [

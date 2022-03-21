@@ -11,7 +11,7 @@ const RecipeCards = ({ recipes, headerText }) => (
                     cookingTime={recipe.cookingTime}
                     servings={recipe.servings}
                     key={recipe.id}
-                    image={recipe.image[0] && recipe.image[0].localFile.publicURL}
+                    image={recipe.image[0]?.localFile}
                     name={recipe.name}
                     slug={recipe.slug}
                     tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
