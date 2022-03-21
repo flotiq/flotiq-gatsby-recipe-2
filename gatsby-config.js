@@ -13,7 +13,7 @@ module.exports = {
     siteMetadata: {
         title: 'Flotiq recipe starter for Gatsby',
         description: 'Flotiq recipe starter for Gatsby',
-        siteUrl: 'https://example.com',
+        siteUrl: 'https://flotiqgatsbyrecipe2.gatsbyjs.io',
     },
     plugins: [
         {
@@ -61,8 +61,8 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://your-domain.com',
-                sitemap: 'https://your-domain.com/sitemap.xml',
+                host: 'https://flotiqgatsbyrecipe2.gatsbyjs.io',
+                sitemap: 'https://flotiqgatsbyrecipe2.gatsbyjs.io/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
             },
         },

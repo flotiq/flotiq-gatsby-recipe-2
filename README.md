@@ -62,7 +62,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
     flotiq import [flotiqApiKey] .
     ```
 
-   It will add one example object to your Flotiq account.
+   It will add two example objects to your Flotiq account.
 
    _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work, You don't need any content types in your account._
 
