@@ -27,13 +27,12 @@ const RecipeTemplate = ({ data }) => {
             </div>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div
-                    className="flex basis-full lg:basis-1/2 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${recipe.image[0] && recipe.image[0].localFile.publicURL}')` }}
+                    className="flex basis-full lg:basis-1/2"
                 >
                     <GatsbyImage
                         image={getImage(recipe.image[0].localFile)}
                         alt={recipe.name}
-                        className="w-full lg:hidden"
+                        className="w-full"
                     />
                 </div>
                 <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
