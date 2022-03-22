@@ -6,7 +6,6 @@ import Layout from '../layouts/layout';
 // import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 import RecipeCards from '../sections/RecipeCards';
 import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
-import RecipeImage from '../assets/recipe-image.jpg';
 
 const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
@@ -57,7 +56,8 @@ const IndexPage = ({ data, pageContext }) => {
                 tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
                 preparationTime="10 min"
                 portions="2"
-                image={RecipeImage}
+                image={data.file}
+                imageAlt="Cozy, Little Chilli Weekend"
             />
             <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
@@ -105,6 +105,11 @@ export const pageQuery = graphql`
                         }
                     }
                 }
+            }
+        }
+        file(name: {eq: "recipe-image"}) {
+            childImageSharp {
+                gatsbyImageData(height: 375, layout: CONSTRAINED)
             }
         }
     }

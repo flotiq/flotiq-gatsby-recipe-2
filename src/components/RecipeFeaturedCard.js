@@ -2,10 +2,9 @@ import React from 'react';
 import { Card } from 'flotiq-components-react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, tags, image, onClick }) => (
+const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, tags, image, imageAlt }) => (
     <Card
         horizontal
-        onClick={onClick}
         bordered={false}
         rounded="none"
         additionalClasses={['mb-4 cursor-pointer max-w-7xl mx-auto ']}
@@ -57,13 +56,13 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
             {/* </div> */}
         </Card.Body>
         <div
-            style={{ backgroundImage: `url('${image}')` }}
-            className="w-full lg:w-auto order-1 lg:order-2 lg:basis-3/5 bg-cover bg-center"
+            className="w-full lg:w-auto order-1 lg:order-2 lg:basis-3/5"
         >
             <GatsbyImage
                 image={getImage(image)}
-                alt={title}
-                className="w-full md:hidden"
+                alt={imageAlt}
+                objectFit="cover"
+                className="w-full"
             />
         </div>
 
