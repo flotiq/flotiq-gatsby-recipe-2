@@ -42,7 +42,6 @@ const RecipeTemplate = ({ data }) => {
                             {' '}
                             <span className="font-semibold">
                                 {recipe.cookingTime}
-                                {' '}
                             </span>
                             min
                         </p>

@@ -25,7 +25,7 @@ const CustomRecipeCard = ({ cookingTime, servings, name, image, tags, slug }) =>
                     <p className="px-4 py-2 bg-light-gray">
                         Time:
                         {' '}
-                        <span className="font-semibold text-sm">{cookingTime}</span>
+                        <span className="font-semibold text-sm">{`${cookingTime}min`}</span>
                     </p>
                     <p className="px-4 py-2 bg-light-gray">
                         Portions:

@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, tags, image, imageAlt }) => (
+const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, tags, image, imageAlt, slug }) => (
     <Card
         horizontal
         bordered={false}
         rounded="none"
-        additionalClasses={['mb-4 cursor-pointer max-w-7xl mx-auto ']}
+        additionalClasses={['mb-4 max-w-7xl mx-auto ']}
         proportionsForHorizontal={{
             body: '2/5',
             img: '3/5',
@@ -33,12 +34,14 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
                 </p>
             </div>
             <div>
-                <Card.Title>
-                    {title}
-                </Card.Title>
-                <Card.Text additionalClasses={['line-clamp-5 lg:line-clamp-4 xl:line-clamp-5']}>
-                    {excerpt}
-                </Card.Text>
+                <Link to={`/${slug}`}>
+                    <Card.Title>
+                        <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">{title}</span>
+                    </Card.Title>
+                    <Card.Text additionalClasses={['line-clamp-5 lg:line-clamp-4 xl:line-clamp-5']}>
+                        {excerpt}
+                    </Card.Text>
+                </Link>
             </div>
             {/* Uncomment this to add tags to your recipes */}
             {/* <div className="w-full"> */}
@@ -58,12 +61,14 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
         <div
             className="w-full lg:w-auto order-1 lg:order-2 lg:basis-3/5"
         >
-            <GatsbyImage
-                image={getImage(image)}
-                alt={imageAlt}
-                objectFit="cover"
-                className="w-full"
-            />
+            <Link to={`/${slug}`}>
+                <GatsbyImage
+                    image={getImage(image)}
+                    alt={imageAlt}
+                    objectFit="cover"
+                    className="w-full"
+                />
+            </Link>
         </div>
 
     </Card>

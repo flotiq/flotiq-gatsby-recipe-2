@@ -9,6 +9,8 @@ import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 
 const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
+    const featuredRecipe = data.recipe;
+    // const recipess = data.featuredRecipe.nodes;
     // const categoryTabs = [
     //     { name: 'Breakfast', href: '#', current: true },
     //     { name: 'Dinner', href: '#', current: false },
@@ -45,19 +47,14 @@ const IndexPage = ({ data, pageContext }) => {
             {/* Uncomment this to add categories to your recipes */}
             {/* <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} /> */}
             <RecipeFeaturedCard
-                title={(
-                    <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">
-                        Cozy, Little
-                        <span className="block text-secondary leading-relaxed"> Chilli Weekend </span>
-                    </span>
-                )}
-                excerpt="Get some protein into a vegan diet with this tasty chickpea curry jacket.
-                It's an easy midweek meal, or filling lunch that packs a lot of flavour."
+                title={recipes[0].name}
+                excerpt={recipes[0].description}
                 tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
-                preparationTime="10 min"
-                portions="2"
-                image={data.file}
-                imageAlt="Cozy, Little Chilli Weekend"
+                preparationTime={`${recipes[0].cookingTime}min`}
+                portions={recipes[0].servings}
+                image={recipes[0].image[0]?.localFile}
+                imageAlt={recipes[0].name}
+                slug={recipes[0].slug}
             />
             <RecipeCards recipes={recipes} headerText="Newest recipes" />
             <Pagination
@@ -85,7 +82,7 @@ export const pageQuery = graphql`
                 description
             }
         }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
+        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip) {
             nodes {
                 id
                 cookingTime
