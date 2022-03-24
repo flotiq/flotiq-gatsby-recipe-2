@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Image, Header, List, Paragraph } from 'flotiq-components-react';
+import { Header, List, Paragraph } from 'flotiq-components-react';
 import { Helmet } from 'react-helmet';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../layouts/layout';
 import RecipeBackButton from '../components/recipe/RecipeBackButton';
 import RecipeSteps from '../components/recipe/RecipeSteps';
@@ -16,18 +17,22 @@ const RecipeTemplate = ({ data }) => {
         <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
                 <title>{recipe.name}</title>
+                <meta
+                    name="description"
+                    content={recipe.description}
+                />
             </Helmet>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <RecipeBackButton additionalClass={['mt-12 mb-5 uppercase']} backButtonText="Go back" />
             </div>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div
-                    className="flex basis-full lg:basis-1/2 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${recipe.image[0] && recipe.image[0].localFile.publicURL}')` }}
+                    className="flex basis-full lg:basis-1/2"
                 >
-                    <Image
-                        url={recipe.image[0] && recipe.image[0].localFile.publicURL}
-                        additionalClasses={['lg:hidden']}
+                    <GatsbyImage
+                        image={getImage(recipe.image[0].localFile)}
+                        alt={recipe.name}
+                        className="w-full"
                     />
                 </div>
                 <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
@@ -37,7 +42,6 @@ const RecipeTemplate = ({ data }) => {
                             {' '}
                             <span className="font-semibold">
                                 {recipe.cookingTime}
-                                {' '}
                             </span>
                             min
                         </p>
@@ -113,6 +117,9 @@ export const pageQuery = graphql`
                 image {
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
                 step

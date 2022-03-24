@@ -11,9 +11,9 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby starter boilerplate',
-        description: 'Flotiq gatsby starter boilerplate',
-        siteUrl: 'https://example.com',
+        title: 'Flotiq recipe starter for Gatsby',
+        description: 'Flotiq recipe starter for Gatsby',
+        siteUrl: 'https://flotiqgatsbyrecipe2.gatsbyjs.io',
     },
     plugins: [
         {
@@ -55,14 +55,21 @@ module.exports = {
                 path: `${__dirname}/gatsby-config.js`,
             },
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'assets',
+                path: `${__dirname}/src/assets`,
+            },
+        },
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://your-domain.com',
-                sitemap: 'https://your-domain.com/sitemap.xml',
+                host: 'https://flotiqgatsbyrecipe2.gatsbyjs.io',
+                sitemap: 'https://flotiqgatsbyrecipe2.gatsbyjs.io/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
             },
         },

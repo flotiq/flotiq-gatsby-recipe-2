@@ -83,7 +83,7 @@ const Footer = () => (
                 flex flex-col items-center space-y-5 md:space-y-8"
         >
             <Link to="/">
-                <Image url={Logo} additionalClasses={['block h-8 w-auto md:h-10 w-auto']} />
+                <Image url={Logo} additionalClasses={['block h-8 w-auto md:h-10 w-auto']} alt="Logo" />
             </Link>
             <div className="flex items-center justify-center space-x-4 md:space-x-3">
                 {navigation.social.map((item) => (
