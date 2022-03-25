@@ -38,9 +38,10 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
                     <Card.Title>
                         <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">{title}</span>
                     </Card.Title>
-                    <Card.Text additionalClasses={['line-clamp-5 lg:line-clamp-4 xl:line-clamp-5']}>
-                        <span dangerouslySetInnerHTML={{ __html: excerpt }} />
-                    </Card.Text>
+                    <div
+                        className="text-base font-light my-4 line-clamp-5 lg:line-clamp-4 xl:line-clamp-5"
+                        dangerouslySetInnerHTML={{ __html: excerpt }}
+                    />
                 </Link>
             </div>
             {/* Uncomment this to add tags to your recipes */}
