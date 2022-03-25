@@ -39,7 +39,7 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
                         <span className="block text-3xl md:text-5xl mb-4 mx-1 font-normal">{title}</span>
                     </Card.Title>
                     <Card.Text additionalClasses={['line-clamp-5 lg:line-clamp-4 xl:line-clamp-5']}>
-                        {excerpt}
+                        <span dangerouslySetInnerHTML={{ __html: excerpt }} />
                     </Card.Text>
                 </Link>
             </div>

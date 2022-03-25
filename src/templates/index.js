@@ -50,7 +50,7 @@ const IndexPage = ({ data, pageContext }) => {
                 title={recipes[0].name}
                 excerpt={recipes[0].description}
                 tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
-                preparationTime={`${recipes[0].cookingTime}min`}
+                preparationTime={recipes[0].cookingTime}
                 portions={recipes[0].servings}
                 image={recipes[0].image[0]?.localFile}
                 imageAlt={recipes[0].name}

@@ -43,7 +43,6 @@ const RecipeTemplate = ({ data }) => {
                             <span className="font-semibold">
                                 {recipe.cookingTime}
                             </span>
-                            min
                         </p>
                         <p className="px-4 py-3 bg-light-gray">
                             Portions:
