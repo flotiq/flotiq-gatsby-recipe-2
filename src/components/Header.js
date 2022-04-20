@@ -35,7 +35,9 @@ const PageHeader = () => (
                             </div>
                         </div>
                         <div className="order-3 md:order-2 hidden md:flex items-center justify-center w-full">
-                            <Header text={headerText} additionalClasses={['!text-3xl font-semibold']} />
+                            <Header additionalClasses={['!text-3xl font-semibold']}>
+                                {headerText}
+                            </Header>
                         </div>
                         <div className="order-1 md:order-3 flex items-center">
                             <div className="flex-shrink-0">
