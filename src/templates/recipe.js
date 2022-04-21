@@ -50,16 +50,15 @@ const RecipeTemplate = ({ data }) => {
                             <span className="font-semibold">{recipe.servings}</span>
                         </p>
                     </div>
-                    <Header
-                        additionalClasses={['text-xl md:text-5xl text-secondary !font-normal']}
-                        text={recipe.name}
-                    />
-                    <Paragraph text={recipe.description} />
-                    <Header
-                        level={4}
-                        additionalClasses={['uppercase mt-16 mb-10']}
-                        text="Ingredients:"
-                    />
+                    <Header additionalClasses={['text-xl md:text-5xl text-secondary !font-normal']}>
+                        {recipe.name}
+                    </Header>
+                    <Paragraph>
+                        {recipe.description}
+                    </Paragraph>
+                    <Header level={4} additionalClasses={['uppercase mt-16 mb-10']}>
+                        Ingredients:
+                    </Header>
                     <List
                         items={recipe.ingredients.map((ingredient) => (
                             { content: `${ingredient.amount} ${ingredient.unit} ${ingredient.product}` }
