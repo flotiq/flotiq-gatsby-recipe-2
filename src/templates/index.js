@@ -9,7 +9,7 @@ import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 
 const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
-    const featuredRecipe = data.recipe;
+    // const featuredRecipe = data.recipe;
     // const recipess = data.featuredRecipe.nodes;
     // const categoryTabs = [
     //     { name: 'Breakfast', href: '#', current: true },
