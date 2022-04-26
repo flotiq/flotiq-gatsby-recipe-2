@@ -23,7 +23,7 @@
     "@tailwindcss/forms": "^0.5.0",
     "flotiq-components-react": "^1.0.0",
     "gatsby": "^4.10.1",
-    "gatsby-plugin-google-analytics": "^4.10.0",
+    "gatsby-plugin-google-gtag": "^4.12.1",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-manifest": "^4.10.1",
     "gatsby-plugin-react-helmet": "^5.10.0",
