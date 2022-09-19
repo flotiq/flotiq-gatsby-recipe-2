@@ -21,10 +21,10 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
 Start the project from template using [Flotiq CLI]((https://github.com/flotiq/flotiq-cli))
 
-    ```bash
-   npm install -g flotiq-cli
-   flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-recipe-2.git [flotiqApiKey]
-    ```
+```bash
+npm install -g flotiq-cli
+flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-recipe-2.git [flotiqApiKey]
+```
    * `flotiqApKey` - Read and write API key to your Flotiq account
    * `projectName` - project name or project path (if you wish to start project in or import data from the current directory - use `.`)
 
@@ -40,10 +40,10 @@ This command will:
 Environment variables are stored in the `.env` files.
 The `.env.development` file inside the root of the directory should have the following structure:
 
-    ```
-    GATSBY_FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
-    GA_MEASUREMENT_ID=YOUR MEASUREMENT ID
-    ```
+```
+GATSBY_FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
+GA_MEASUREMENT_ID=YOUR MEASUREMENT ID
+```
 
 ## Import data (optional)
 
