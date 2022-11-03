@@ -1,0 +1,212 @@
+{
+  "name": "recipe",
+  "label": "Recipe",
+  "schemaDefinition": {
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+      },
+      {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9-_]*$",
+            "minLength": 1
+          },
+          "image": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataSource"
+            },
+            "minItems": 0
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "step": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DataSource"
+                  },
+                  "minItems": 0
+                }
+              }
+            }
+          },
+          "servings": {
+            "type": "number"
+          },
+          "cookingTime": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "ingredients": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "product": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "required": [
+      "name",
+      "slug"
+    ],
+    "additionalProperties": false
+  },
+  "metaDefinition": {
+    "order": [
+      "name",
+      "slug",
+      "image",
+      "description",
+      "ingredients",
+      "steps",
+      "cookingTime",
+      "servings"
+    ],
+    "propertiesConfig": {
+      "name": {
+        "label": "Name",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text",
+        "isTitlePart": true
+      },
+      "slug": {
+        "label": "Slug",
+        "unique": true,
+        "helpText": "Slug can only have alphanumerical characters, - and _",
+        "inputType": "text"
+      },
+      "image": {
+        "label": "Image",
+        "unique": false,
+        "helpText": "",
+        "inputType": "datasource",
+        "validation": {
+          "relationContenttype": "_media"
+        }
+      },
+      "steps": {
+        "label": "Steps",
+        "items": {
+          "order": [
+            "image",
+            "step"
+          ],
+          "propertiesConfig": {
+            "step": {
+              "label": "Step",
+              "unique": false,
+              "helpText": "",
+              "inputType": "textarea"
+            },
+            "image": {
+              "label": "Image",
+              "unique": false,
+              "helpText": "",
+              "inputType": "datasource",
+              "validation": {
+                "relationContenttype": "_media"
+              }
+            }
+          }
+        },
+        "unique": false,
+        "helpText": "",
+        "inputType": "object"
+      },
+      "servings": {
+        "label": "Servings",
+        "unique": false,
+        "helpText": "",
+        "inputType": "number"
+      },
+      "cookingTime": {
+        "label": "Cooking time",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text"
+      },
+      "description": {
+        "label": "Description",
+        "unique": false,
+        "helpText": "",
+        "inputType": "richtext"
+      },
+      "ingredients": {
+        "label": "Ingredients",
+        "items": {
+          "order": [
+            "amount",
+            "unit",
+            "product"
+          ],
+          "propertiesConfig": {
+            "unit": {
+              "label": "Unit",
+              "unique": false,
+              "options": [
+                "",
+                "g",
+                "kg",
+                "ml",
+                "pcs",
+                "tablespoon",
+                "teaspoon",
+                "ounce",
+                "pound",
+                "cup",
+                "clove",
+                "pinch"
+              ],
+              "helpText": "",
+              "inputType": "select"
+            },
+            "amount": {
+              "label": "Amount",
+              "unique": false,
+              "helpText": "",
+              "inputType": "number"
+            },
+            "product": {
+              "label": "Product",
+              "unique": false,
+              "helpText": "",
+              "inputType": "text"
+            }
+          }
+        },
+        "unique": false,
+        "helpText": "",
+        "inputType": "object"
+      }
+    }
+  }
+}

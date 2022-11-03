@@ -1,0 +1,113 @@
+{
+  "id": "recipe-3",
+  "name": "Cozy, Little\nChilli Weekend ",
+  "slug": "cozy-little-chilli-weekend",
+  "image": [
+    {
+      "type": "internal",
+      "dataUrl": "/api/v1/content/_media/_media-5e97076893d8c"
+    }
+  ],
+  "steps": [
+    {
+      "step": "Heat oven to 200C/180C fan/gas 6. Prick the sweet potatoes all over with a fork, then put on a baking tray and roast in the oven for 45 mins or until tender when pierced with a knife.",
+      "image": [
+        {
+          "type": "internal",
+          "dataUrl": "/api/v1/content/_media/_media-5e97076893d9c"
+        }
+      ]
+    },
+    {
+      "step": "Meanwhile, melt the coconut oil in a large saucepan over medium heat. Add the cumin seeds and fry for 1 min until fragrant, then add the onion and fry for 7-10 mins until softened.",
+      "image": [
+        {
+          "type": "internal",
+          "dataUrl": "/api/v1/content/_media/_media-5e97076893d9d"
+        }
+      ]
+    },
+    {
+      "step": "Put the garlic, ginger and green chilli into the pan, and cook for 2-3 mins. Add the spices and tikka masala paste and cook for a further 2 mins until fragrant, then tip in the tomatoes. Bring to a simmer, then tip in the chickpeas and cook for a further 20 mins until thickened. Season.",
+      "image": [
+        {
+          "type": "internal",
+          "dataUrl": "/api/v1/content/_media/_media-5e97076893d9e"
+        }
+      ]
+    },
+    {
+      "step": "Put the roasted sweet potatoes on four plates and cut open lengthways. Spoon over the chickpea curry and squeeze over the lemon wedges. Season, then scatter with coriander before serving."
+    }
+  ],
+  "servings": 2,
+  "cookingTime": "10 min",
+  "description": "Get some protein into a vegan diet with this tasty chickpea curry jacket.\nIt's an easy midweek meal, or filling lunch that packs a lot of flavour.",
+  "ingredients": [
+    {
+      "unit": "pcs",
+      "amount": 4,
+      "product": "sweet potatoes"
+    },
+    {
+      "unit": "tablespoon",
+      "amount": 1,
+      "product": "coconut oil"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 1.5,
+      "product": "cumin seeds"
+    },
+    {
+      "unit": "pcs",
+      "amount": 1,
+      "product": "large onion, diced"
+    },
+    {
+      "unit": "pcs",
+      "amount": 2,
+      "product": "garlic cloves, crushed\nthumb-sized piece ginger, finely grated"
+    },
+    {
+      "unit": "pcs",
+      "amount": 1,
+      "product": "green chilli, finely chopped"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 1,
+      "product": "garam masala"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 1,
+      "product": "ground coriander"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 0.5,
+      "product": "turmeric"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 2,
+      "product": "tikka masala paste"
+    },
+    {
+      "unit": "teaspoon",
+      "amount": 2,
+      "product": "400g can chopped tomatoes"
+    },
+    {
+      "unit": "pcs",
+      "amount": 2,
+      "product": "400g can chickpeas, drained"
+    },
+    {
+      "unit": "pcs",
+      "amount": 1,
+      "product": "lemon wedges and coriander leaves, to serve"
+    }
+  ]
+}
