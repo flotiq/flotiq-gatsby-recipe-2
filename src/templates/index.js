@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Announcement, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
-// import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
+import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 import RecipeCards from '../sections/RecipeCards';
 import RecipeFeaturedCard from '../components/RecipeFeaturedCard';
 
@@ -11,14 +11,14 @@ const IndexPage = ({ data, pageContext }) => {
     const recipes = data.allRecipe.nodes;
     // const featuredRecipe = data.recipe;
     // const recipess = data.featuredRecipe.nodes;
-    // const categoryTabs = [
-    //     { name: 'Breakfast', href: '#', current: true },
-    //     { name: 'Dinner', href: '#', current: false },
-    //     { name: 'Dessert', href: '#', current: false },
-    //     { name: 'Lunch', href: '#', current: false },
-    //     { name: 'Snack', href: '#', current: false },
-    //     { name: 'Vegan', href: '#', current: false },
-    // ];
+    const categoryTabs = [
+        { name: 'Breakfast', href: '#', current: true },
+        { name: 'Dinner', href: '#', current: false },
+        { name: 'Dessert', href: '#', current: false },
+        { name: 'Lunch', href: '#', current: false },
+        { name: 'Snack', href: '#', current: false },
+        { name: 'Vegan', href: '#', current: false },
+    ];
     return (
         <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
@@ -44,8 +44,8 @@ const IndexPage = ({ data, pageContext }) => {
                 variant="transparent"
                 additionalClasses={['max-w-3xl mx-auto mt-10 !text-3xl md:!text-4xl !font-light !px-4']}
             />
-            {/* Uncomment this to add categories to your recipes */}
-            {/* <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} /> */}
+            {/* Comment this to hide categories in your recipes */}
+            <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
             <RecipeFeaturedCard
                 title={recipes[0].name}
                 excerpt={recipes[0].description}
@@ -68,7 +68,7 @@ const IndexPage = ({ data, pageContext }) => {
                 additionalClasses={['font-light']}
                 prevNextAdditionalClasses={['!bg-primary px-3 md:px-4 !w-auto !text-white']}
                 activeAdditionalClasses={['!font-semibold before:block before:absolute '
-                + 'before:w-2 before:h-2 before:-bottom-2 before:bg-primary']}
+                    + 'before:w-2 before:h-2 before:-bottom-2 before:bg-primary']}
             />
         </Layout>
     );
