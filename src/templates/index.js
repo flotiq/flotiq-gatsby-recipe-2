@@ -49,7 +49,7 @@ const IndexPage = ({ data, pageContext }) => {
             <RecipeFeaturedCard
                 title={recipes[0].name}
                 excerpt={recipes[0].description}
-                tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
+                tags={[]}
                 preparationTime={recipes[0].cookingTime}
                 portions={recipes[0].servings}
                 image={recipes[0].image[0]?.localFile}

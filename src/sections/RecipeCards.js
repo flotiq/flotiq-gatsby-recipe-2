@@ -16,7 +16,7 @@ const RecipeCards = ({ recipes, headerText }) => (
                     image={recipe.image[0]?.localFile}
                     name={recipe.name}
                     slug={recipe.slug}
-                    tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
+                    tags={[]}
                 />
             ))}
         </div>
