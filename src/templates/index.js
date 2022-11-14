@@ -49,7 +49,7 @@ const IndexPage = ({ data, pageContext }) => {
             <RecipeFeaturedCard
                 title={recipes[0].name}
                 excerpt={recipes[0].description}
-                tags={['#dinner', '#vegan', '#lunch', '#glutenfree']}
+                tags={[]}
                 preparationTime={recipes[0].cookingTime}
                 portions={recipes[0].servings}
                 image={recipes[0].image[0]?.localFile}
@@ -68,7 +68,7 @@ const IndexPage = ({ data, pageContext }) => {
                 additionalClasses={['font-light']}
                 prevNextAdditionalClasses={['!bg-primary px-3 md:px-4 !w-auto !text-white']}
                 activeAdditionalClasses={['!font-semibold before:block before:absolute '
-                + 'before:w-2 before:h-2 before:-bottom-2 before:bg-primary']}
+                    + 'before:w-2 before:h-2 before:-bottom-2 before:bg-primary']}
             />
         </Layout>
     );
