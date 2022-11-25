@@ -16,7 +16,7 @@ const PageHeader = () => (
                         <div className="order-2 md:order-1 flex grow md:grow-0">
                             <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
                                 <Link to="/">
-                                    <StaticImage src='../assets/recipe-logo.svg' additionalClasses={['block h-8 md:h-12 w-auto']} height={48} width={124} alt="Logo" placeholder="none" />
+                                    <StaticImage src='../assets/recipe-logo.svg' className={['block h-8 md:h-12 w-auto']} height={48} width={124} alt="Logo" placeholder="none" />
                                 </Link>
                             </div>
                             <div className="-ml-2 mr-2 flex items-center md:hidden">
