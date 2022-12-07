@@ -50,7 +50,7 @@ const CustomRecipeFeaturedCard = ({ preparationTime, portions, title, excerpt, t
                     {tags && tags.map((tag) => (
                         <a
                             href="/"
-                            className="mr-7 my-1 py-2 inline-flex items-center justify-center 
+                            className="mr-7 my-1 py-2 inline-flex items-center justify-center
                     rounded-md underline text-sm font-light hover:text-secondary"
                             key={tag}
                         >

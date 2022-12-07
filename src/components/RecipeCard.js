@@ -41,7 +41,7 @@ const CustomRecipeCard = ({ cookingTime, servings, name, image, tags, slug }) =>
                 {tags && tags.map((tag) => (
                     <a
                         href="/"
-                        className="mr-5 my-1 py-2 inline-flex items-center justify-center 
+                        className="mr-5 my-1 py-2 inline-flex items-center justify-center
                        rounded-md underline text-xs font-light hover:text-secondary"
                     >
                         {tag}
