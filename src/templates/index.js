@@ -75,41 +75,41 @@ const IndexPage = ({ data, pageContext }) => {
 };
 
 export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip) {
-            nodes {
-                id
-                cookingTime
-                description
-                name
-                slug
-                servings
-                image {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-            }
-        }
-        file(name: {eq: "recipe-image"}) {
-            childImageSharp {
-                gatsbyImageData(height: 375, layout: CONSTRAINED)
-            }
-        }
+query indexQuery($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
+    allRecipe(sort: {flotiqInternal: {createdAt: DESC}}, limit: $limit, skip: $skip) {
+      nodes {
+        id
+        cookingTime
+        description
+        name
+        slug
+        servings
+        image {
+          extension
+          url
+          width
+          height
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+      }
+    }
+    file(name: {eq: "recipe-image"}) {
+      childImageSharp {
+        gatsbyImageData(height: 375, layout: CONSTRAINED)
+      }
+    }
+  }
 `;
 
 export default IndexPage;

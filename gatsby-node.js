@@ -5,15 +5,15 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const singleRecipe = path.resolve('./src/templates/recipe.js');
     const result = await graphql(`
-        query GetRecipes {
-            allRecipe(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
-                edges {
-                    node {
-                        slug
-                    }
-                }
+    query GetRecipes {
+        allRecipe(sort: {flotiqInternal: {createdAt: DESC}}) {
+          edges {
+            node {
+              slug
             }
+          }
         }
+      }
 `);
 
     if (result.errors) {
