@@ -2,8 +2,8 @@ import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Link } from 'gatsby';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Image, Header } from 'flotiq-components-react';
-import Logo from '../assets/recipe-logo.svg';
+import { Header } from 'flotiq-components-react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const headerText = 'All you can eat';
 
@@ -16,7 +16,26 @@ const PageHeader = () => (
                         <div className="order-2 md:order-1 flex grow md:grow-0">
                             <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
                                 <Link to="/">
-                                    <Image url={Logo} additionalClasses={['block h-8 md:h-12 w-auto']} alt="Logo" />
+                                    <>
+                                        <div className='block md:hidden'>
+                                            <StaticImage
+                                                src="../assets/recipe-logo.svg"
+                                                alt="Logo small"
+                                                width={83}
+                                                height={32}
+                                                placeholder="none"
+                                            />
+                                        </div>
+                                        <div className='hidden md:block'>
+                                            <StaticImage
+                                                src="../assets/recipe-logo.svg"
+                                                alt="Logo big"
+                                                width={124}
+                                                height={48}
+                                                placeholder="none"
+                                            />
+                                        </div>
+                                    </>
                                 </Link>
                             </div>
                             <div className="-ml-2 mr-2 flex items-center md:hidden">

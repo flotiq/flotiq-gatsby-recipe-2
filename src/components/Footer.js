@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Image, PoweredByFlotiq } from 'flotiq-components-react';
-import Logo from '../assets/recipe-logo.svg';
+import { PoweredByFlotiq } from 'flotiq-components-react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const instagramPath = 'M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772'
     + ' 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.0'
@@ -96,7 +96,26 @@ const Footer = () => (
                 flex flex-col items-center space-y-5 md:space-y-8"
         >
             <Link to="/">
-                <Image url={Logo} additionalClasses={['block h-8 w-auto md:h-10 w-auto']} alt="Logo" />
+                <>
+                    <div className='block md:hidden'>
+                        <StaticImage
+                            src="../assets/recipe-logo.svg"
+                            height={32}
+                            width={83}
+                            alt="Logo small"
+                            placeholder="none"
+                        />
+                    </div>
+                    <div className='hidden md:block'>
+                        <StaticImage
+                            src="../assets/recipe-logo.svg"
+                            alt="Logo big"
+                            width={103}
+                            height={40}
+                            placeholder="none"
+                        />
+                    </div>
+                </>
             </Link>
             <div className="flex items-center justify-center space-x-4 md:space-x-3">
                 {navigation.social.map((item) => (
