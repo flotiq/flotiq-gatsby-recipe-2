@@ -81,71 +81,75 @@ const RecipeTemplate = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-    query PortfolioProjectBySlug($slug: String!) {
-        site {
-            siteMetadata {
-                title
-            }
-        }
-        recipe( slug: { eq: $slug } ) {
-            id
-            cookingTime
-            description
-            name
-            slug
-            servings
-            image {
-                extension
-                url
-                width
-                height
-                localFile {
-                    publicURL
-                    childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                    }
-                }
-            }
-            ingredients {
-                amount
-                unit
-                product
-            }
-            steps {
-                image {
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-                step
-            }
-        }
-        allRecipe(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3, filter: {slug: {ne: $slug}}) {
-            nodes {
-                id
-                cookingTime
-                description
-                name
-                slug
-                servings
-                image {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-            }
-        }
+query PortfolioProjectBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
     }
+    recipe(slug: {eq: $slug}) {
+      id
+      cookingTime
+      description
+      name
+      slug
+      servings
+      image {
+        extension
+        url
+        width
+        height
+        localFile {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+          }
+        }
+      }
+      ingredients {
+        amount
+        unit
+        product
+      }
+      steps {
+        image {
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+        step
+      }
+    }
+    allRecipe(
+      sort: {flotiqInternal: {createdAt: DESC}}
+      limit: 3
+      filter: {slug: {ne: $slug}}
+    ) {
+      nodes {
+        id
+        cookingTime
+        description
+        name
+        slug
+        servings
+        image {
+          extension
+          url
+          width
+          height
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default RecipeTemplate;
