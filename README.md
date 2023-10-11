@@ -7,7 +7,7 @@ Gatsby starter for recipes with Flotiq source
 
 Kick off your project with this recipe boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-Live Demo: https://flotiqgatsbyrecipe2.gatsbyjs.io
+Live Demo: https://flotiq-gatsby-recipe-2.netlify.app
 
 This project use:
 * [Flotiq](https://flotiq.com) - Headless CMS for string your data (You can create account [here](https://editor.flotiq.com/register.html))
