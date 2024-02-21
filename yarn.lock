@@ -1131,10 +1131,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.10.tgz#44dbfeacb5d89efca5ad7ad6cc941b2ac1ee424b"
   integrity sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw==
 
-"@fontsource/sora@^4.5.3":
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-4.5.12.tgz#07cf449f699a5eea95b148478e521e0b27bec7ec"
-  integrity sha512-7pWwrWIKcLH0pvKCSssb96KFFKwt5+eKHC4yHfFYtxapQ6Ax+/Rj02QHnIkXyy5nc5cOvyOAQM2MAIGlMtoj9w==
+"@fontsource/sora@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.16.tgz#9a1fd11d917e910c33e61c310855bf095795ab82"
+  integrity sha512-H9014qWhe8tEDHjl8NaYRXRBHkQoBG+P5UnivT9DhbJNmPZn6ZXYD+NFHQWatAxrlriIcavjgSEVtGxZe/+/Cw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.9.0":
   version "2.9.0"
