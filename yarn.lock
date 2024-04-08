@@ -5726,19 +5726,19 @@ gatsby-telemetry@^4.13.1, gatsby-telemetry@^4.9.0:
     lodash "^4.17.21"
     node-fetch "^2.6.11"
 
-gatsby-transformer-sharp@^5.2.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-5.9.0.tgz#5d63ce75fed511497262769711c1201ca2c32605"
-  integrity sha512-kA1KTWxV9gcnwCW7r9JSdibGjK4XjnGQgVup05WDGRWw+oAZjW/aZGvHXhGfl1DhyL9t9DinJvoUpdSkk2jdNg==
+gatsby-transformer-sharp@^5.13.1:
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-5.13.1.tgz#9822caac4566b0d13e278bb1db9bdc9c839badd3"
+  integrity sha512-H5gBpnKOn86ns65fv0cP8yIpnT//+dkpnSOZSrtrtYEgmwEFqblUHSSyolu2SURgE+Af55W7IKTYk2w2d9+PCQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     bluebird "^3.7.2"
     common-tags "^1.8.2"
     fs-extra "^11.1.1"
-    gatsby-plugin-utils "^4.9.0"
+    gatsby-plugin-utils "^4.13.1"
     probe-image-size "^7.2.3"
-    semver "^7.3.8"
-    sharp "^0.31.3"
+    semver "^7.5.3"
+    sharp "^0.32.6"
 
 gatsby-worker@^2.13.1:
   version "2.13.1"
