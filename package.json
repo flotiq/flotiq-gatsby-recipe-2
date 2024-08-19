@@ -16,7 +16,7 @@
     "lint": "eslint --ext .js,.jsx ."
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.0.14",
+    "@fontsource/poppins": "^5.0.15",
     "@fontsource/sora": "^5.0.18",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "1.0.6",

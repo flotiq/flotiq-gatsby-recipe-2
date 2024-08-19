@@ -1416,10 +1416,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.6.tgz#1898a31c7e17a50384147a02a4e6264b1b1a0291"
   integrity sha512-0KI3zGxIUs1KDR/pjQPdJH4Z8nGBm0yJ5WRoRfdw1Kzeh45jkIfA0rmD0kBF6fKHH+xaH7g8y4jIXyAV5MGK3g==
 
-"@fontsource/poppins@^5.0.14":
-  version "5.0.14"
-  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.14.tgz#c7ede0730859dc0c1b85d1a92e4cb0f2223db0ae"
-  integrity sha512-nmM1zpPo3Uh4JcGAVSQuWaZNYh2FbbwWhZ5t6hRaynmJaNTBW85d3nEh9zMmzI0HX7X5xqQVdRHeDatKpOGsnA==
+"@fontsource/poppins@^5.0.15":
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.15.tgz#0767044c8cc653e170016b3553ae8c67ae60e0b4"
+  integrity sha512-hN8jhlb01v0f8F3X5h8XUiqz/dMYg/RrhyHmU1o4gZIgk+Yj2SeqmRLBj88Lh+pEjdVTmbDXSHGCVlbyPaSm8A==
 
 "@fontsource/sora@^5.0.18":
   version "5.0.18"
