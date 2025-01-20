@@ -1,6 +1,8 @@
 {
   "name": "recipe",
   "label": "Recipe",
+  "workflowId": "generic",
+  "internal": false,
   "schemaDefinition": {
     "type": "object",
     "allOf": [
@@ -114,7 +116,6 @@
         }
       },
       "steps": {
-        "label": "Steps",
         "items": {
           "order": [
             "image",
@@ -138,6 +139,7 @@
             }
           }
         },
+        "label": "Steps",
         "unique": false,
         "helpText": "",
         "inputType": "object"
@@ -161,7 +163,6 @@
         "inputType": "richtext"
       },
       "ingredients": {
-        "label": "Ingredients",
         "items": {
           "order": [
             "amount",
@@ -203,10 +204,12 @@
             }
           }
         },
+        "label": "Ingredients",
         "unique": false,
         "helpText": "",
         "inputType": "object"
       }
     }
-  }
+  },
+  "featuredImage": []
 }
