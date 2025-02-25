@@ -1,7 +1,6 @@
 {
   "name": "recipe",
   "label": "Recipe",
-  "workflowId": "generic",
   "internal": false,
   "schemaDefinition": {
     "type": "object",
