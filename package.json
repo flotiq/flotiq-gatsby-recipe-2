@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^5.1.1",
-    "@fontsource/sora": "^5.1.1",
+    "@fontsource/sora": "^5.2.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
